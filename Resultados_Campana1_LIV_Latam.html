@@ -284,8 +284,37 @@
       <div class="t">
         <div class="eyebrow">Números de la operación</div>
         <h2>Dos años calendario, un solo resultado</h2>
-        <p class="lead" style="max-width:none">El cierre de <b>2025</b> dejó <b>dinero no utilizado</b> que <b>financia el exceso proyectado de 2026</b>. Sumando ambos años calendario, la operación sigue <b>por debajo del presupuesto aprobado</b>, y la caja se ejecuta prácticamente en línea con lo presupuestado. El detalle por línea está abierto y filtrable, y todo cruza con el libro oficial (DRE) de Grupo Salta.</p>
+        <p class="lead" style="max-width:none">El cierre de <b>2025</b> dejó <b>dinero no utilizado</b> que <b>financia el exceso proyectado de 2026</b>. Sumando ambos años calendario, la operación sigue <b>por debajo del presupuesto aprobado</b>, y el cashflow se ejecuta prácticamente en línea con lo presupuestado. El detalle por línea está abierto y filtrable, y todo cruza con el libro oficial (DRE) de Grupo Salta.</p>
       </div>
+    </div>
+
+    <!-- Cuadro resumen económico PLAN vs REAL (resumen económico) -->
+    <div class="card pad mt">
+      <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:14px">
+        <div>
+          <div class="block-title" style="margin-bottom:2px"><span class="dot"></span>Resumen económico · PLAN vs REAL</div>
+          <div class="block-sub" id="e1sub" style="margin-bottom:0">Consolidado ago 2025 – dic 2026 · USD</div>
+        </div>
+        <div class="toggle-wrap">
+          <button id="e1cons" class="on" onclick="setE1('cons')">2 años</button>
+          <button id="e1y25" onclick="setE1('y25')">2025</button>
+          <button id="e1y26" onclick="setE1('y26')">2026</button>
+        </div>
+      </div>
+      <div style="overflow-x:auto;margin-top:16px">
+        <table>
+          <thead><tr><th id="e1head">ago 25 – dic 26</th><th>PLAN</th><th>REAL</th></tr></thead>
+          <tbody>
+            <tr><td>Alumnos</td><td class="num" id="e1-al-p">12.000</td><td class="num" id="e1-al-r">15.000</td></tr>
+            <tr><td>Revenue</td><td class="num" id="e1-rev-p">$540k</td><td class="num" id="e1-rev-r">$510k</td></tr>
+            <tr><td>Expenses (Opex)</td><td class="num" id="e1-exp-p">−$1,74M</td><td class="num" id="e1-exp-r">−$1,73M</td></tr>
+            <tr><td>EBITDA</td><td class="num neg" id="e1-eb-p">−$1,20M</td><td class="num neg" id="e1-eb-r">−$1,22M</td></tr>
+            <tr><td>CAPEX</td><td class="num" id="e1-cx-p">−$675k</td><td class="num" id="e1-cx-r">−$592k</td></tr>
+            <tr class="tot"><td>Cashflow</td><td class="num neg" id="e1-ca-p">−$1,87M</td><td class="num neg" id="e1-ca-r">−$1,81M</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">A dos años, el cashflow planificado era ~<b>−$1,87M</b> y el real/proyectado ~<b>−$1,81M</b>: prácticamente en línea, incluso <b class="pos">~$59k por debajo del plan</b>. El ticket más bajo golpea el EBITDA de 2026, pero el <b>dinero no utilizado de 2025 lo compensa</b>; la inversión de entrada a mercado se ejecuta como estaba previsto. <span class="faint">Expenses = Opex + print + logística + Lexium (plataforma de medición) · EBITDA = Revenue − Expenses · Cashflow = EBITDA − CAPEX. Cifras 2026 por ejecutarse (cierre 31/12/26).</span></p>
     </div>
 
     <!-- Consolidado 2 años -->
@@ -307,21 +336,21 @@
           <div class="ttl">Proyección a fin de año</div>
           <div class="rows">
             <div class="r"><span>Forecast aprobado</span><b>$1.180.169</b></div>
-            <div class="r"><span>Proyectado (PROY)</span><b>$1.390.570</b></div>
+            <div class="r"><span>Proyectado (PROY)</span><b>$1.406.579</b></div>
           </div>
-          <div class="res"><span class="lab warn">Exceso proyectado</span><span class="big warn">−$210.401</span></div>
+          <div class="res"><span class="lab warn">Exceso proyectado</span><span class="big warn">−$226.410</span></div>
         </div>
         <div class="ycol ytot">
           <div class="yr">CONSOLIDADO · 2 AÑOS</div>
           <div class="ttl">Resultado neto</div>
           <div class="rows">
             <div class="r"><span>Presupuesto total</span><b>$1.908.467</b></div>
-            <div class="r"><span>Real + proyectado</span><b>$1.814.664</b></div>
+            <div class="r"><span>Real + proyectado</span><b>$1.830.673</b></div>
           </div>
-          <div class="res"><span class="lab">Resultado neto</span><span class="big pos" style="color:#5EE3BE">+$93.803</span></div>
+          <div class="res"><span class="lab">Resultado neto</span><span class="big pos" style="color:#5EE3BE">+$77.794</span></div>
         </div>
       </div>
-      <p class="note">La cuenta es directa: el dinero no utilizado de 2025 (<b>+$304k</b>) cubre el exceso proyectado de 2026 (<b>−$210,4k</b>) y deja un <b class="pos">resultado neto de +$94k a favor</b> sobre el presupuesto comprometido. 2025 está cerrado (real); 2026 en curso, con real a junio de <b>$576k</b> y el resto proyectado (PROY con los últimos ajustes de headcount). El equipo financiero de Salta reclasifica parte del OPEX como CAPEX hasta junio 2026, lo que <b>compensa el resultado operativo</b> del año (visible en el DRE).</p>
+      <p class="note">La cuenta es directa: el dinero no utilizado de 2025 (<b>+$304k</b>) cubre el exceso proyectado de 2026 (<b>−$226,4k</b>) y deja un <b class="pos">resultado neto de +$78k a favor</b> sobre el presupuesto comprometido. 2025 está cerrado (real); 2026 en curso, con real a junio de <b>$576k</b> y el resto proyectado (PROY con los últimos ajustes de headcount). El equipo financiero de Salta reclasifica parte del OPEX como CAPEX hasta junio 2026, lo que <b>compensa el resultado operativo</b> del año (visible en el DRE).</p>
     </div>
 
     <!-- Detalle por línea filtrable -->
@@ -358,55 +387,58 @@
             <tr><td>Sales team</td><td class="c25">77.892</td><td class="c25">40.239</td><td class="d25 pos">+37.653</td><td class="c26 sep">248.765</td><td class="c26">268.188</td><td class="d26 neg">−19.423</td><td class="cTot pos sep">+18.230</td></tr>
             <tr><td>MKT (equipo + Ads)</td><td class="c25">97.288</td><td class="c25">29.029</td><td class="d25 pos">+68.259</td><td class="c26 sep">148.950</td><td class="c26">164.103</td><td class="d26 neg">−15.153</td><td class="cTot pos sep">+53.106</td></tr>
             <tr class="only26"><td>Pedagogical team <span style="font-size:11px;color:var(--faint)">(2025 en Stakeholders)</span></td><td class="c25">—</td><td class="c25">—</td><td class="d25" style="color:var(--muted)">—</td><td class="c26 sep">126.250</td><td class="c26">137.638</td><td class="d26 neg">−11.388</td><td class="cTot neg sep">−11.388</td></tr>
-            <tr class="only26"><td>Print expenses</td><td class="c25">—</td><td class="c25">—</td><td class="d25" style="color:var(--muted)">—</td><td class="c26 sep">91.800</td><td class="c26">155.807</td><td class="d26 neg">−64.007</td><td class="cTot neg sep">−64.007</td></tr>
+            <tr class="only26"><td>Print expenses <span style="font-size:11px;color:var(--faint)">(156k base + 12k envío BR→MX)</span></td><td class="c25">—</td><td class="c25">—</td><td class="d25" style="color:var(--muted)">—</td><td class="c26 sep">91.800</td><td class="c26">168.616</td><td class="d26 neg">−76.816</td><td class="cTot neg sep">−76.816</td></tr>
             <tr><td>Travel / Events / Tools</td><td class="c25">112.267</td><td class="c25">66.720</td><td class="d25 pos">+45.547</td><td class="c26 sep">186.320</td><td class="c26">214.298</td><td class="d26 neg">−27.978</td><td class="cTot pos sep">+17.569</td></tr>
             <tr><td>Finance &amp; administrativo</td><td class="c25">66.921</td><td class="c25">21.031</td><td class="d25 pos">+45.890</td><td class="c26 sep">51.080</td><td class="c26">76.637</td><td class="d26 neg">−25.557</td><td class="cTot pos sep">+20.333</td></tr>
-            <tr><td>Logistic</td><td class="c25">1.625</td><td class="c25">0</td><td class="d25 pos">+1.625</td><td class="c26 sep">16.200</td><td class="c26">13.000</td><td class="d26 pos">+3.200</td><td class="cTot pos sep">+4.825</td></tr>
-            <tr class="only26"><td>Lexium <span style="font-size:11px;color:var(--faint)">· OPEX</span></td><td class="c25">—</td><td class="c25">—</td><td class="d25" style="color:var(--muted)">—</td><td class="c26 sep">0</td><td class="c26">50.096</td><td class="d26 neg">−50.096</td><td class="cTot neg sep">−50.096</td></tr>
+            <tr><td>Logistic</td><td class="c25">1.625</td><td class="c25">0</td><td class="d25 pos">+1.625</td><td class="c26 sep">16.200</td><td class="c26">16.200</td><td class="d26" style="color:var(--muted)">0</td><td class="cTot pos sep">+1.625</td></tr>
+            <tr class="only26"><td>Lexium <span style="font-size:11px;color:var(--faint)">(plataforma de medición) · OPEX</span></td><td class="c25">—</td><td class="c25">—</td><td class="d25" style="color:var(--muted)">—</td><td class="c26 sep">0</td><td class="c26">50.096</td><td class="d26 neg">−50.096</td><td class="cTot neg sep">−50.096</td></tr>
             <tr class="only25"><td>Material / Plataforma <span style="font-size:11px;color:var(--faint)">· reclas. CAPEX</span></td><td class="c25">146.723</td><td class="c25">86.954</td><td class="d25 pos">+59.769</td><td class="c26 sep">—</td><td class="c26">—</td><td class="d26" style="color:var(--muted)">—</td><td class="cTot pos sep">+59.769</td></tr>
-            <tr class="tot"><td>Total</td><td class="c25">728.298</td><td class="c25">424.094</td><td class="d25 pos">+304.204</td><td class="c26 sep">1.180.169</td><td class="c26">1.390.570</td><td class="d26 neg">−210.401</td><td class="cTot pos sep">+93.803</td></tr>
+            <tr class="tot"><td>Total</td><td class="c25">728.298</td><td class="c25">424.094</td><td class="d25 pos">+304.204</td><td class="c26 sep">1.180.169</td><td class="c26">1.406.579</td><td class="d26 neg">−226.410</td><td class="cTot pos sep">+77.794</td></tr>
           </tbody>
         </table>
       </div>
-      <p class="note">Las tres columnas <b>Δ</b> se leen directo: <b class="pos">Δ 2025</b> = dinero no utilizado del año cerrado (<b>+$304k</b>); <b class="neg">Δ 2026</b> = exceso proyectado (<b>−$210k</b>); y el <b>resultado consolidado</b> (<b class="pos">+$94k</b>). El exceso de 2026 se concentra en <span class="neg">Print +$64k, Lexium +$50k y Pedagógico +$11k</span>. <b>Lexium es OPEX</b> (decisión estratégica fuera del BP). El equipo <b>Pedagogical</b>, en 2025, se contabilizó dentro de <b>Stakeholders</b>. Alineación de líneas: <i>Travel/Events/Tools</i> agrupa viajes, eventos y herramientas; <i>Finance &amp; admin</i> agrupa legales, impuestos, oficina y CSC; <i>Material/Plataforma</i> es la línea que Salta reclasifica como CAPEX hasta junio 2026.</p>
+      <p class="note">Las tres columnas <b>Δ</b> se leen directo: <b class="pos">Δ 2025</b> = dinero no utilizado del año cerrado (<b>+$304k</b>); <b class="neg">Δ 2026</b> = exceso proyectado (<b>−$226k</b>); y el <b>resultado consolidado</b> (<b class="pos">+$78k</b>). El exceso de 2026 se concentra en <span class="neg">Print +$77k, Lexium (plataforma de medición) +$50k y Pedagógico +$11k</span>. <b>Lexium es OPEX</b> (decisión estratégica fuera del BP). El equipo <b>Pedagogical</b>, en 2025, se contabilizó dentro de <b>Stakeholders</b>. Alineación de líneas: <i>Travel/Events/Tools</i> agrupa viajes, eventos y herramientas; <i>Finance &amp; admin</i> agrupa legales, impuestos, oficina y CSC; <i>Material/Plataforma</i> es la línea que Salta reclasifica como CAPEX hasta junio 2026.</p>
     </div>
 
-    <!-- CAPEX + Cruce DRE -->
-    <div class="grid2 mt">
-      <div class="card pad">
-        <div class="block-title"><span class="dot"></span>CAPEX · principales líneas del año</div>
-        <div class="block-sub">Compromiso de inversión · fuente única: DRE de Salta · se ejecutará completo</div>
-        <table style="margin-top:4px">
-          <thead><tr><th>Línea de inversión</th><th>Presupuesto</th></tr></thead>
-          <tbody>
-            <tr><td>Portal / plataforma</td><td>$82.932</td></tr>
-            <tr><td>Traducción y desarrollo de material</td><td>$99.264</td></tr>
-            <tr><td>Actualización de material</td><td>$24.816</td></tr>
-            <tr><td>Estructura capitalizada (ramp-up)</td><td>$285.532</td></tr>
-            <tr class="tot"><td>Total CAPEX autorizado</td><td>$492.544</td></tr>
+    <!-- CAPEX (2025 / 2026 con botones) -->
+    <div class="card pad mt">
+      <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:14px">
+        <div>
+          <div class="block-title" style="margin-bottom:2px"><span class="dot"></span>CAPEX · principales líneas</div>
+          <div class="block-sub" id="cxsub" style="margin-bottom:0">2026 · compromiso de inversión · fuente única: DRE de Salta · se ejecutará completo</div>
+        </div>
+        <div class="toggle-wrap">
+          <button id="cx26" class="on" onclick="setCx('26')">2026</button>
+          <button id="cx25" onclick="setCx('25')">2025</button>
+        </div>
+      </div>
+      <div style="overflow-x:auto;margin-top:16px">
+        <table>
+          <thead><tr><th>Línea de inversión</th><th>Autorizado</th><th>Real / Proy</th></tr></thead>
+          <tbody id="cxbody26">
+            <tr><td>Portal / plataforma</td><td>$82.932</td><td>$82.932</td></tr>
+            <tr><td>Traducción y desarrollo de material</td><td>$99.264</td><td>$99.264</td></tr>
+            <tr><td>Actualización de material</td><td>$24.816</td><td>$24.816</td></tr>
+            <tr><td>Estructura capitalizada (ramp-up)</td><td>$285.532</td><td>$285.532</td></tr>
+            <tr class="tot"><td>Total CAPEX · 2026</td><td>$492.544</td><td>$492.544</td></tr>
+          </tbody>
+          <tbody id="cxbody25" style="display:none">
+            <tr><td>Desarrollo de plataforma</td><td>$41.465</td><td>$0</td></tr>
+            <tr><td>Traducción de material</td><td>$96.552</td><td>$86.954</td></tr>
+            <tr><td>Marca</td><td>$8.621</td><td>$4.952</td></tr>
+            <tr><td>Apertura de empresa</td><td>$8.621</td><td>$8.026</td></tr>
+            <tr><td>Mantenimiento</td><td>$8.706</td><td>$0</td></tr>
+            <tr><td>IOF</td><td>$18.000</td><td>$0</td></tr>
+            <tr class="tot"><td>Total CAPEX · 2025</td><td>$181.965</td><td>$99.932</td></tr>
           </tbody>
         </table>
-        <p class="note">El CAPEX se gestiona y reporta 100% según el DRE. Se ejecutará en su totalidad según el cronograma de plataforma y materiales. La <i>estructura capitalizada</i> es el OPEX que Salta reclasifica como CAPEX hasta junio 2026 — mecanismo que compensa el resultado operativo de 2026.</p>
       </div>
-      <div class="card pad">
-        <div class="block-title"><span class="dot"></span>EBITDA y caja · el efecto del ticket</div>
-        <div class="block-sub">Ejercicio de sensibilidad · ticket plan $45 vs real $35 · cierre 31/12/26</div>
-        <table style="margin-top:4px">
-          <thead><tr><th>2026</th><th>Plan · $45</th><th>Real · $34</th></tr></thead>
-          <tbody>
-            <tr><td>Alumnos</td><td>12.000</td><td>15.000</td></tr>
-            <tr><td>Revenue</td><td>$540k</td><td>$510k</td></tr>
-            <tr><td>EBITDA</td><td>−$652k</td><td class="neg">−$882k</td></tr>
-            <tr><td>Caja (EBITDA − CAPEX)</td><td>−$1.145k</td><td class="neg">−$1.374k</td></tr>
-          </tbody>
-        </table>
-        <p class="note">Lo decimos de frente: con el ticket más bajo ($45→$34), el EBITDA se deteriorará ~$230k y será del orden de <b>−$882k al cierre</b>. <b>El EBITDA no es la métrica que nos favorece este año</b> — el valor está en el volumen captado y en el upside 2027, cuando el ticket normaliza a ~$40. Estos números se ejecutarán a lo largo de 2026; el realizado a la fecha todavía no reconoce el revenue del programa (se reconoce al entregar el servicio), por eso el parcial sólo refleja costos.</p>
-      </div>
+      <p class="note">El CAPEX se gestiona y reporta 100% según el DRE. En <b>2026</b> ($492,5k) se ejecutará completo según el cronograma de plataforma y materiales; la <i>estructura capitalizada</i> es el OPEX que Salta reclasifica como CAPEX hasta junio 2026. En <b>2025</b> entró el setup (plataforma, traducción, constitución): $182k autorizado / $100k ejecutado. Consolidado a dos años: <b>$675k</b>.</p>
     </div>
 
     <!-- Cobranza -->
     <div class="card pad mt">
-      <div class="block-title"><span class="dot"></span>Cuándo entra la caja de la campaña</div>
+      <div class="block-title"><span class="dot"></span>Cuándo entra el cashflow de la campaña</div>
       <div class="block-sub">Cobranza año 1 · $460.985 · prácticamente todo dentro de 2026</div>
       <div class="grid2 w60" style="align-items:center">
         <div class="bars">
@@ -443,30 +475,29 @@
       </div>
     </div>
 
-    <div class="grid2 mt">
+    <div class="grid2 w60 mt">
       <div class="card pad">
-        <div class="block-title"><span class="dot"></span>Alumnos · hacia el forecast</div>
-        <div class="block-sub">Ganados hoy vs forecast</div>
-        <div class="meter">
-          <div class="top"><span>Ganados <b>14.016</b></span><span>Forecast <b>15.000</b></span></div>
-          <div class="track" style="position:relative;overflow:visible">
-            <div class="fill green" style="width:93.4%"></div>
-            <div style="position:absolute;top:-5px;bottom:-5px;left:80%;width:2px;background:var(--ink);border-radius:2px"></div>
-          </div>
-          <div style="position:relative;height:18px;margin-top:3px">
-            <span style="position:absolute;left:80%;transform:translateX(-50%);font-size:11px;font-weight:600;color:var(--ink);white-space:nowrap">▲ Objetivo 12.000 ✓ cumplido</span>
-          </div>
-          <div class="cap">El objetivo de 12.000 alumnos ya está superado; vamos por las 15.000. El pipeline calificado cubre de sobra la brecha.</div>
-        </div>
+        <div class="block-title"><span class="dot"></span>Resumen comercial · plan, cerrado y proyección</div>
+        <div class="block-sub">Alumnos y revenue · campaña 1</div>
+        <table style="margin-top:6px">
+          <thead><tr><th></th><th>PLAN</th><th>CERRADOS</th><th>PROY</th></tr></thead>
+          <tbody>
+            <tr><td>Alumnos</td><td class="num">12.000</td><td class="num pos">14.016</td><td class="num">15.000</td></tr>
+            <tr class="tot"><td>Revenue</td><td class="num">$540k</td><td class="num pos">$470k</td><td class="num">$510k</td></tr>
+          </tbody>
+        </table>
+        <p class="note">El objetivo de <b>12.000 alumnos está superado</b> (14.016 ganados) y el forecast cierra en <b>15.000</b>. El revenue se sostiene cerca del plan pese al ticket más bajo: <b>$470k cerrados → $510k proyectados</b>.</p>
       </div>
       <div class="card pad">
-        <div class="block-title"><span class="dot"></span>Revenue · hacia el forecast</div>
-        <div class="block-sub">Revenue de hoy vs forecast</div>
-        <div class="meter">
-          <div class="top"><span>Revenue <b>$470k</b></span><span>Forecast <b>$510k</b></span></div>
-          <div class="track"><div class="fill" style="width:92%"></div></div>
-          <div class="cap">92% del forecast asegurado · alineado con la PROY del P&L ($510k) · ticket real ~$33,5/alumno</div>
-        </div>
+        <div class="block-title"><span class="dot"></span>Proyección de cartera · ciclo 2 (27-28)</div>
+        <div class="block-sub">Mismo volumen, sin las bonificaciones de año 1</div>
+        <table style="margin-top:6px">
+          <thead><tr><th>15.000 alumnos</th><th>26-27</th><th>27-28 · contrato</th></tr></thead>
+          <tbody>
+            <tr class="tot"><td>Revenue</td><td class="num">$510k</td><td class="num pos">$600k&nbsp;(+22%)</td></tr>
+          </tbody>
+        </table>
+        <p class="note">Cuando los ~2.030 bonificados pasan a pagar y el ticket normaliza a ~$40, el mismo volumen lleva el revenue de <b>$510k a ~$600k</b> en el ciclo siguiente.</p>
       </div>
     </div>
 
@@ -497,11 +528,17 @@
       </div>
     </div>
 
-    <!-- Cobertura por estado -->
+    <!-- Cobertura por estado (desplegable) -->
     <div class="card pad mt">
-      <div class="block-title"><span class="dot"></span>Dónde está LIV · cobertura por estado</div>
-      <div class="block-sub">14 estados · 44 colegios · ~14.010 alumnos · año 1</div>
-      <div style="overflow-x:auto;margin-top:6px">
+      <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:14px">
+        <div>
+          <div class="block-title" style="margin-bottom:2px"><span class="dot"></span>Dónde está LIV · cobertura por estado</div>
+          <div class="block-sub" style="margin-bottom:0">14 estados · 44 colegios · ~14.010 alumnos · año 1</div>
+        </div>
+        <button class="btn" id="cobBtn" onclick="togCob()"><span class="cobIc">▸</span><span class="cobTx">Ver cobertura</span></button>
+      </div>
+      <div class="collapse" id="cobPanel">
+      <div style="overflow-x:auto;margin-top:16px">
         <table>
           <thead><tr><th>Estado</th><th>Colegios</th><th>Alumnos</th><th>% del alumnado</th></tr></thead>
           <tbody>
@@ -524,6 +561,7 @@
         </table>
       </div>
       <p class="note">Cobertura nacional desde el año 1 en <b>14 estados</b>. <b>Estado de México, Querétaro y Puebla</b> concentran ~55% del alumnado; el resto se reparte del Bajío al Norte, Occidente y Sureste. Sinaloa entra con un colegio nuevo (+300 alumnos).</p>
+      </div>
     </div>
 
     <div class="grid2 w60 mt">
@@ -631,15 +669,15 @@
       <div class="block-sub" style="margin-bottom:0">Campaña 2027–2028 · ticket de referencia $45/alumno</div>
       <div style="display:flex;flex-wrap:wrap;gap:34px;margin-top:20px;align-items:baseline">
         <div>
-          <div style="font-size:clamp(38px,6vw,58px);font-weight:700;color:var(--brand);line-height:1">$3,69M</div>
+          <div style="font-size:clamp(38px,6vw,58px);font-weight:700;color:var(--brand);line-height:1">~$2,51M</div>
           <div style="font-size:13px;color:var(--muted);margin-top:4px">potencial de facturación identificado</div>
         </div>
         <div>
-          <div style="font-size:clamp(28px,4vw,40px);font-weight:700;color:var(--ink);line-height:1">~82.020</div>
+          <div style="font-size:clamp(28px,4vw,40px);font-weight:700;color:var(--ink);line-height:1">~55.430</div>
           <div style="font-size:13px;color:var(--muted);margin-top:4px">alumnos mapeados</div>
         </div>
         <div class="pills" style="margin-top:0">
-          <span class="pill"><b>4 capas</b> de oportunidad cuantificada</span>
+          <span class="pill"><b>Mapeado</b> sobre clientes y redes ya conquistados</span>
         </div>
       </div>
     </div>
@@ -662,8 +700,8 @@
       </div>
       <div class="layer l4">
         <div class="ln">C4</div>
-        <div class="info"><h4>Funil restante — campaña actual</h4><p>Oportunidades activas (17.447 alumnos) + pérdidas recuperables por timing (26.868 alumnos).</p></div>
-        <div class="val"><div class="u">$1,99M</div><div class="a">44.315 alumnos</div></div>
+        <div class="info"><h4>Funil restante — campaña actual</h4><p>Oportunidades activas + pérdidas recuperables, de las que esperamos convertir ~40%.</p></div>
+        <div class="val"><div class="u">~$0,8M</div><div class="a">~17.700 alumnos (40%)</div></div>
       </div>
     </div>
 
@@ -673,7 +711,7 @@
         <div class="block-sub">La capa de mayor probabilidad, recalculada al volumen real de campaña</div>
         <p style="font-size:14.5px;color:var(--muted);margin-top:4px">El upsell directo se calculó sobre una base menor de alumnos. <b style="color:var(--ink)">Llevado proporcionalmente a 15.000 alumnos</b>, la oportunidad de secundaria y preparatoria en colegios ya ganados sube:</p>
         <div style="display:flex;align-items:center;gap:22px;margin-top:18px">
-          <div><div style="font-size:12px;color:var(--faint)">Base original</div><div class="num" style="font-size:26px">$470k</div></div>
+          <div><div style="font-size:12px;color:var(--faint)">Base original</div><div class="num" style="font-size:26px">$470k <span style="font-size:13px;color:var(--faint);font-weight:400">(HOY)</span></div></div>
           <div style="color:var(--brand-2);font-size:22px">→</div>
           <div><div style="font-size:12px;color:var(--brand)">Ajustado a 15k</div><div class="num" style="font-size:30px;color:var(--brand)">≈ $500k</div></div>
         </div>
@@ -712,7 +750,7 @@
     <div class="snap" style="margin-top:6px"><div class="snap-grid">
       <div class="c">
         <div class="k">Resultado neto · 2 años</div>
-        <div class="v num pos">+$94k</div>
+        <div class="v num pos">+$78k</div>
         <div class="s">A favor sobre el presupuesto comprometido</div>
         <div class="tag tag-pos">2025 cubre el exceso 2026</div>
       </div>
@@ -730,13 +768,13 @@
       </div>
       <div class="c">
         <div class="k">Potencial 2027–28</div>
-        <div class="v num">$3,7M</div>
-        <div class="s">~82.000 alumnos mapeados</div>
-        <div class="tag tag-gold">4 capas de oportunidad</div>
+        <div class="v num">~$2,5M</div>
+        <div class="s">~55.430 alumnos mapeados</div>
+        <div class="tag tag-gold">Sobre clientes ya ganados</div>
       </div>
     </div></div>
     <div style="margin-top:22px;padding:18px 22px;border:1px solid var(--line);border-left:3px solid var(--brand);border-radius:13px;background:var(--card);font-size:14.5px;color:var(--ink);line-height:1.55">
-      <b>El resumen en una línea:</b> OPEX bajo control (<b class="pos">+$94k</b> de dinero no utilizado consolidado), objetivo de volumen <b>cumplido y superado</b>, y un potencial de <b>$3,7M</b> ya mapeado sobre relaciones conquistadas. El <b>EBITDA se resiente por el ticket más bajo</b> y se recupera en 2027, cuando el ticket normaliza a ~$40.
+      <b>El resumen en una línea:</b> OPEX bajo control (<b class="pos">+$78k</b> de dinero no utilizado consolidado), objetivo de volumen <b>cumplido y superado</b>, y un potencial de <b>~$2,5M</b> ya mapeado sobre relaciones conquistadas. El <b>EBITDA se resiente por el ticket más bajo</b> y se recupera en 2027, cuando el ticket normaliza a ~$40.
     </div>
   </div>
 </section>
@@ -759,6 +797,40 @@
     document.getElementById('fAll').classList.toggle('on',y==='all');
     document.getElementById('f25').classList.toggle('on',y==='25');
     document.getElementById('f26').classList.toggle('on',y==='26');
+  }
+
+  var E1DATA={
+    cons:{sub:'Consolidado ago 2025 – dic 2026 · USD',head:'ago 25 – dic 26',al:['12.000','15.000'],rev:['$540k','$510k'],exp:['−$1,74M','−$1,73M'],eb:['−$1,20M','−$1,22M'],cx:['−$675k','−$592k'],ca:['−$1,87M','−$1,81M']},
+    y25:{sub:'2025 · ago–dic · pre-lanzamiento, sin alumnos ni revenue · USD',head:'2025 · ago–dic',al:['—','—'],rev:['$0','$0'],exp:['−$546k','−$324k'],eb:['−$546k','−$324k'],cx:['−$182k','−$100k'],ca:['−$728k','−$424k']},
+    y26:{sub:'2026 · ene–dic · USD',head:'2026 · ene–dic',al:['12.000','15.000'],rev:['$540k','$510k'],exp:['−$1,19M','−$1,41M'],eb:['−$652k','−$898k'],cx:['−$492k','−$492k'],ca:['−$1,14M','−$1,39M']}
+  };
+  function setE1(v){
+    var d=E1DATA[v];
+    document.getElementById('e1sub').textContent=d.sub;
+    document.getElementById('e1head').textContent=d.head;
+    var m={al:'e1-al',rev:'e1-rev',exp:'e1-exp',eb:'e1-eb',cx:'e1-cx',ca:'e1-ca'};
+    for(var k in m){
+      document.getElementById(m[k]+'-p').textContent=d[k][0];
+      document.getElementById(m[k]+'-r').textContent=d[k][1];
+    }
+    ['cons','y25','y26'].forEach(function(x){document.getElementById('e1'+x).classList.toggle('on',x===v);});
+  }
+
+  function setCx(y){
+    document.getElementById('cxbody26').style.display = y==='26'?'':'none';
+    document.getElementById('cxbody25').style.display = y==='25'?'':'none';
+    document.getElementById('cxsub').textContent = y==='26'
+      ? '2026 · compromiso de inversión · fuente única: DRE de Salta · se ejecutará completo'
+      : '2025 · cerrado · autorizado vs ejecutado real';
+    document.getElementById('cx26').classList.toggle('on', y==='26');
+    document.getElementById('cx25').classList.toggle('on', y==='25');
+  }
+
+  function togCob(){
+    var p=document.getElementById('cobPanel'),b=document.getElementById('cobBtn');
+    var open=p.classList.toggle('open');
+    b.querySelector('.cobIc').textContent=open?'▾':'▸';
+    b.querySelector('.cobTx').textContent=open?'Ocultar cobertura':'Ver cobertura';
   }
 </script>
 </body>
